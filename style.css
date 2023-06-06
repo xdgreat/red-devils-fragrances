@@ -1,7 +1,8 @@
 body {
   font-family: "Raleway", sans-serif;
-  height: 400vh;
   background-color: #0c0f0a;
+  color: white;
+  overflow-x: hidden;
 }
 
 .navigation {
@@ -14,11 +15,12 @@ body {
   right: 50%;
   transform: translateX(-50%);
   padding-inline: 2em;
-  padding-block: .5em;
+  padding-block: 0.5em;
   position: fixed;
   top: 0;
   color: black;
-  background-color: rgba(255, 255, 255,.8);
+  background-color: #f2f2f4;
+  z-index: 10;
   border-radius: 20px;
   transition: background-color 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -51,7 +53,7 @@ body {
 
 .hero {
   width: 100%;
-  height: 90vh;
+  height: 95vh;
   position: relative;
 }
 .hero::before {
@@ -66,4 +68,104 @@ body {
   isolation: isolate;
   background-attachment: fixed;
   filter: brightness(70%);
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Dosis", sans-serif;
+}
+.content-one-history {
+  width: 80%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5em;
+  transform: translateX(-200px);
+  opacity: 0;
+}
+.history-img {
+  width: auto;
+  height: 400px;
+}
+
+.history-title {
+  font-size: 50px;
+}
+.history-content {
+  width: 50%;
+}
+
+.history-paragraph {
+  font-size: 25px;
+}
+.content-two-history {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 5em;
+  width: 80%;
+  margin-inline: auto;
+  justify-content: space-evenly;
+  transform: translateX(200px);
+  opacity: 0;
+}
+.history-two-img {
+  height: 400px;
+  width: auto;
+}
+.history-title-two {
+  font-size: 50px;
+}
+.history-paragraph-two {
+  font-size: 25px;
+}
+.history-content-two {
+  width: 50%;
+}
+
+.our-products {
+  background-color: #f2f2f4;
+  color: #0c0f0a;
+  padding-block: 2em;
+  margin-block-start: 1.5em;
+}
+.product-container-title {
+  text-align: center;
+  font-size: 60px;
+}
+.product-image {
+  height: 300px;
+  width: auto;
+  margin-inline: auto;
+}
+
+
+.product-title {
+  font-size: 27px;
+}
+.product-gallery {
+  display: flex;
+  width: 80%;
+  margin-inline: auto;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  row-gap: 5em;
+}
+.product-container {
+  flex-basis: 33.33%;
+  transform: scale(.7);
+  opacity: 0;
+}
+.showX {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 700ms;
+}
+.showZ{
+  transform: scale(1);
+  opacity: 1;
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 700ms;
 }
