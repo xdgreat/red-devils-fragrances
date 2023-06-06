@@ -2,14 +2,8 @@ function invertColor() {
   const navElement = document.querySelector("nav");
   const icons = document.querySelectorAll(".nav-icons");
   this.scrollY > 700
-    ? (navElement.classList.remove("transparent"),
-      icons.forEach((icon) => {
-        icon.style.filter = "invert(0%)";
-      }))
-    : (navElement.classList.add("transparent"),
-      icons.forEach((icon) => {
-        icon.style.filter = "invert(100%)";
-      }));
+    ? navElement.classList.remove("transparent")
+    : navElement.classList.add("transparent");
 }
 
 window.addEventListener("scroll", invertColor, false);
@@ -44,21 +38,23 @@ const productObserver = new IntersectionObserver(
   }
 );
 
-product.forEach((slide) => {
-  productObserver.observe(slide);
+product.forEach((products) => {
+  productObserver.observe(products);
 });
 
+const testimonials = document.querySelectorAll(".testimonial-container");
 
-const items = [
-  {
-    test:"ahah",
-    lmfao:45
+const testimonialObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("testimonialSlide", entry.isIntersecting);
+    });
   },
   {
-    testy:"asd",
-    adsa:76
+    threshold: 0.2,
   }
-]
+);
 
-localStorage.setItem("test", items)
-console.log(items)
+testimonials.forEach((testimonial) => {
+  testimonialObserver.observe(testimonial);
+});
