@@ -276,3 +276,38 @@ footer {
   text-align: center;
   font-size: 22px;
 }
+
+.about-section {
+  color: #f5f5f5;
+  padding: 4em 0;
+  text-align: center;
+  margin-block-start: 10em;
+}
+
+.about-title {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  padding: 2em 4em;
+}
+.about-description {
+  font-size: 20px;
+  text-align: start;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 2em;
+  padding: 1em 2em;
+}
+
+.google-maps-section {
+  margin: 2em 0;
+}
+
+.product-section {
+  margin-block-start: 10em;
+  text-align: center;
+}
