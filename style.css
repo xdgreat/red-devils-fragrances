@@ -289,11 +289,6 @@ footer {
   font-weight: 700;
   margin-bottom: 1em;
 }
-.about-content {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  padding: 2em 4em;
-}
 .about-description {
   font-size: 20px;
   text-align: start;
